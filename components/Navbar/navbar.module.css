@@ -1,0 +1,156 @@
+@import '../../app/[locale]/font.css';
+
+.nav {
+    filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.16 ));
+    position: sticky;
+    position: -webkit-sticky;
+    /* top: 0; */
+    top: 86px;
+    z-index: 1000;
+}
+
+.navbarContainer {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1090px;
+    height: 80px;
+}
+
+.navbar svg {
+    cursor: pointer;
+    fill: var(--primary-color);
+}
+
+.link {
+    color: var(--text-color);
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 16px;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    transition: all 0.2s ease;
+    flex-grow: 1;
+}
+
+.link a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navItems {
+    cursor: pointer;
+    position: relative;
+}
+
+.parentLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.children {
+    background: var(--background-color);
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    padding: 25px 20px;
+    top: 100%;
+    left: 0;
+    display: none;
+    min-width: 215px;
+    transition: all 0.3s ease;
+}
+
+.childLinks {
+    color: var(--text-color);
+    font:  calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.childLinks:hover {
+    color: var(--primary-color);
+}
+
+.linkMobile {
+    color: white;
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 16px;
+    text-decoration: none;
+}
+
+.active {
+    background: var(--primary-color);
+}
+
+.active > a {
+    color: white;
+}
+
+.activeMobile {
+    color: var(--secondary-color);
+}
+
+.link:hover {
+    background: var(--primary-color);
+}
+
+.link:hover > a {
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover .children {
+    display: flex;
+}
+
+.toggle {
+    display: none;
+}
+
+@media screen and (max-width: 1130px) {
+    .navbarContainer {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .link {
+        font-size: calc(0.625rem * var(--font-size-multiplier));
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav {
+        display: none !important;
+    }
+
+    /* .navbar a, .navItems {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: end;
+    }
+
+    .toggle {
+        display: flex;
+    } */
+} 

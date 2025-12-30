@@ -1,0 +1,41 @@
+.projectPage {
+    width: 100%;
+}
+
+.projectPage img {
+    border-radius: 10px;
+    width: 100%;
+    height: 268px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.projectPage > div:nth-child(5) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 51px;
+}
+
+.projectPage > div:nth-child(5) img {
+    width: 170px;
+    height: 111px;
+    border-radius: 10px;
+}
+
+.title {
+    color: var(--primary-color);
+    font: 20px "BPG Mrgvlovani Caps 2010";
+    line-height: 28px;
+    height: 52px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.description {
+    font: 14px "BPG Mrgvlovani";
+    line-height: 26px;
+    margin-bottom: 40px;
+}

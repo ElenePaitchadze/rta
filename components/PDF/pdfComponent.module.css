@@ -1,0 +1,68 @@
+.download {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 203px;
+    gap: 20px;
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 16px;
+    text-decoration: none;
+    transition: all 1s ease;
+    margin-bottom: 28px;
+}
+
+.download:hover figure {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.download:hover svg {
+    fill: white
+}
+
+.download p {
+    background: white;
+    border: 1px solid #DBDBDB;
+    border-radius: 10px;
+    transition: 0.5s;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.download p span {
+    width: 93%;
+    max-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.download figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 10px 5px;
+    width: 203px;
+}
+
+@media screen and (max-width: 630px) {
+    .download {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .download p {
+        border-radius: 10px 10px 0 0;
+        padding: 10px 15px;
+    }
+
+    .download figure {
+        border-radius: 0 0 10px 10px;
+        width: unset;
+    }
+}

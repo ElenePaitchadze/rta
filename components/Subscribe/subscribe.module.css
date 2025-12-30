@@ -1,0 +1,142 @@
+.subscribe {
+    background-image: url(../../img/subscribe-banner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 311px;
+}
+
+.subscribe::before {
+    background: black;
+    opacity: 0.4;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.subscribe > * {
+    z-index: 2;
+}
+
+.subscribeContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 654px;
+}
+
+.subscribeContent p:first-child {
+    color: white;
+    font: calc(2.625rem * var(--font-size-multiplier)) "Gilroy GEO";
+    text-align: center;
+    line-height: 56px;
+    margin-bottom: 21px;
+}
+
+.subscribeContent p:nth-child(2) {
+    color: white;
+    font: calc(1rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    text-align: center;
+    line-height: 21px;
+    margin-bottom: 51px;
+    max-width: 340px;
+}
+
+.subscribeContent form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 29px;
+}
+
+.subscribeContent form input {
+    border: none;
+    border-radius: 25px;
+    color: #8A8A8A;
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 19px;
+    width: 436px;
+    height: 50px;
+    padding-left: 20px;
+}
+
+.subscribeContent form input:focus {
+    outline: none;
+}
+
+.subscribeBtn {
+    background: var(--secondary-color);
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 190px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.subscribeBtn span {
+    color: white;
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 19px;
+    margin-top: 3px;
+}
+
+.subscribeBtn svg {
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+}
+
+.subscribeBtn:hover {
+    background: var(--button-hover);
+}
+
+.subscribeBtn:hover svg {
+    transform: rotate(-35deg);
+}
+
+@media screen and (max-width: 1130px) {
+    .subscribe {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .subscribeContent p:first-child {
+        font-size: calc(1.875rem * var(--font-size-multiplier));
+        line-height: 2.5rem;
+        margin-bottom: 11px;
+    }
+
+    .subscribeContent p:nth-child(2) {
+        font-size: calc(0.75rem * var(--font-size-multiplier));
+        margin-bottom: 30px;
+    }
+
+    .subscribeContent form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .subscribeContent form input {
+        width: 100%;
+    }
+
+    .subscribeBtn {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}

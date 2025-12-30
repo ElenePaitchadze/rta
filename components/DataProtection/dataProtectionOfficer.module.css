@@ -1,0 +1,102 @@
+.officerInfo {
+    background: #F6F6F6;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    width: 100%;
+    min-height: 86px;
+} 
+
+.officerInfo > div,
+.officerInfo > p {
+    height: 32px;
+    flex: 1;
+}
+
+.position {
+    color: #8D8D8D;
+    font: 12px 'BPG Mrgvlovani';
+    line-height: 16px;
+    max-width: 300px;
+    border-right: 1px solid #E9E9E9;
+    padding-right: 47px;
+}
+
+.officerName {
+    font: 14px 'BPG Mrgvlovani';
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email {
+    border-left: 1px solid #E9E9E9;
+    border-right: 1px solid #E9E9E9;
+    padding: 0 47px;
+}
+
+.email, .phone {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.email a, .phone a {
+    color: black;
+    text-decoration: none;
+    font: 14px 'BPG Mrgvlovani Caps 2010';
+    line-height: 19px;
+}
+
+.phone { padding-left: 47px; }
+
+@media screen and (max-width: 1050px) {
+    .officerInfo > div,
+    .officerInfo > p {
+        height: unset;
+    }
+
+    .officerInfo {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .officerName {
+        padding-left: unset;
+        justify-content: center;
+    }
+
+    .position {
+        max-width: unset;
+        text-align: center;
+    }
+
+    .email {
+        justify-content: center;
+        padding-left: unset;
+    }
+
+    .phone {
+        padding-left: unset;
+    }
+
+    .position, .officerName, .email {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid #E9E9E9;
+        padding-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .position {
+        padding: 0 30px 10px;
+    }
+}

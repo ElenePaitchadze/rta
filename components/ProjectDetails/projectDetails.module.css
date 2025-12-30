@@ -1,0 +1,120 @@
+.projectPage {
+    width: 100%;
+}
+
+.projectPage img {
+    border-radius: 10px;
+    width: 100%;
+    height: 268px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.name {
+    color: var(--text-color);
+    font: calc(1.25rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 28px;
+    margin-bottom: 28px;
+}
+
+.title {
+    color: var(--primary-color);
+    font: calc(1.25rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 28px;
+    height: 52px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: var(--text-color);
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 26px;
+    margin-bottom: 40px;
+}
+
+.decoration {
+    background: #BFBFBF;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 30px;
+}
+
+.share {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.goback {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+    transition: all 1s ease;
+}
+
+.goback:hover {
+    margin-left: 0;
+}
+
+.goback a {
+    text-decoration: none;
+    color: #A4A4A4;
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 20px;
+}
+
+.shareMedia {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shareMedia > p:first-child {
+    color: var(--primary-color);
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 26px;
+}
+
+.shareMedia svg {
+    cursor: pointer;
+    fill: #A4A4A4;
+    transition: all 0.5s ease;
+}
+
+.shareMedia svg:hover {
+    fill: var(--primary-color)
+}
+
+@media screen and (max-width: 500px) {
+    .projectPage img {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .goback {
+        width: 135px;
+    }
+
+    .goback a {
+        font-size: calc(0.6875rem * var(--font-size-multiplier))px;
+        line-height: 1rem;
+    }
+
+    .shareMedia {
+        width: 120px;
+    }
+
+    .shareMedia > p:first-child {
+        font-size: calc(0.6875rem * var(--font-size-multiplier));
+        line-height: 1rem;
+    }
+
+    .shareMedia > svg {
+        width: 15px;
+    }
+}

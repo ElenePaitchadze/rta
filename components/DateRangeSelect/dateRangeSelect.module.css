@@ -1,0 +1,45 @@
+.inputContainer {
+    position: relative;
+    width: 212px;
+}
+
+.inputBox {
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    font-size: calc(0.75rem * var(--font-size-multiplier));
+    font-family: "BPG Mrgvlovani";
+    width: 100%;
+    height: 30px;
+    padding-left: 20px;
+}
+
+.inputContainer svg {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.inputBox:focus {
+    outline: none;
+}
+
+.calendarWrap {
+    display: inline-block;
+    position: relative;
+}
+
+.calendarElement {
+    position: absolute;
+    top: 40px;
+    border: 1px solid pink;
+    z-index: 999;
+    right: 0;
+}
+
+@media screen and (max-width: 400px) {
+    .calendarElement {
+        left: 0;
+    }
+}

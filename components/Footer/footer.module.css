@@ -1,0 +1,259 @@
+.footer {
+    background-image: url(../../img/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 382px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.footer::after, .footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.footer::before {
+    background: rgba(0, 0, 0, 0.38);
+    z-index: 1;
+}
+
+.footer::after {
+    background: rgba(10, 105, 102, 0.8);
+    z-index: 2;
+}
+
+.footer > * {
+    z-index: 3;
+}
+
+.footerContent {
+    width: 100%;
+    max-width: 1009px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-left: 71px;
+}
+
+.footerContent::before {
+    background-color: #fff;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 53px;
+    width: calc(50% - 500px);
+    z-index: 5;
+}
+
+.footerInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footerContact {
+    display: flex;
+    flex-direction: column;
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 16px;
+    row-gap: 15px;
+}
+
+.footerContact p:first-child {
+    color: white;
+    font: calc(1rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 21px;
+}
+
+.footerContact p:nth-child(2),
+.footerContact p:nth-child(3),
+.footerContact p:nth-child(4) {
+    color: white;
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 16px;
+}
+
+.footerContact a {
+    color: white;
+    text-decoration: none;
+}
+
+.mediaLinks {
+    display: flex;
+    gap: 10px;
+}
+
+.mediaLinks a {
+    background: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    transition: all 0.5s ease;
+}
+
+.mediaLinks a:hover {
+    background-color: var(--primary-color);
+}
+
+.mediaLinks a:hover svg {
+    fill: white;
+}
+
+.mediaLinks svg {
+    fill: var(--primary-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 29px;
+    height: auto;
+}
+
+.logo span {
+    color: white;
+    font: calc(0.8125rem * var(--font-size-multiplier)) "FiraGo";
+    line-height: 16px;
+    max-width: 208px;
+}
+
+.logoEn span {
+    max-width: 165px;
+}
+
+.map {
+    width: 348px;
+}
+
+.map iframe {
+    border: none;
+    border-radius: 10px;
+}
+
+.adapted {
+    color: white;
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 19px;
+    width: 220px;
+    text-align: center;
+}
+
+.adaptContent {
+    cursor: pointer;
+}
+
+.adaptContent > p:nth-child(2) {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.copyright > p {
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 16px;
+}
+
+.copyright > p:first-child {
+    color: rgb(255, 255, 255, 0.61);
+}
+
+.copyright > p:last-child {
+    color: white;
+}
+
+.copyright a {
+    color: white;
+    text-decoration: none;
+}
+
+.adaptComponent {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .adaptComponentVisible {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px; /* Adjust based on your component's height */
+  }
+
+@media screen and (max-width: 1130px) {
+    .footer {
+        padding: 45px 20px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .footerInfo {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .footerInfo > div:first-child {
+        width: 50%;
+    }
+
+    .footerInfo > div:last-child {
+        width: 220px;
+    }
+
+    .footerInfo > div:nth-child(2) {
+        width: 100%;
+    }
+
+    .footerContact {
+        align-items: center;
+    }
+    
+    .footerContent {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .copyright {
+        flex-direction: column;
+    }
+
+    .footerInfo > div:first-child {
+        width: 100%;
+    }
+
+    .footerContact img {
+        width: 30px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .copyright > p {
+        text-align: center;
+    }
+}

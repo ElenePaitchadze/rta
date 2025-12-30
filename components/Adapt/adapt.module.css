@@ -1,0 +1,120 @@
+.contrastHeading,
+.fontHeading {
+    color: white;
+    font-size: calc(0.75rem * var(--font-size-multiplier));
+    font-family: "BPG Mrgvlovani";
+    line-height: 16px;
+}
+
+.contrastContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    width: 220px;
+    margin-bottom: 15px;
+}
+
+.contrasts {
+    display: flex;
+    gap: 12px;
+    width: 116px;
+}
+
+.contrast {
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.contrast > div {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.contrast1 {
+    background: white;
+}
+
+.contrast1 > div {
+    background: black;
+}
+
+.contrast2 {
+    background: black;
+}
+
+.contrast2 > div {
+    background: white;
+}
+
+.contrast3 {
+    background: black;
+}
+
+.contrast3 > div {
+    background: var(--secondary-color);
+}
+
+.contrast4 {
+    background: var(--secondary-color);
+}
+
+.contrast4 > div {
+    background: black;
+}
+
+.fonts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 220px;
+}
+
+.fonts > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+    margin: 0 auto;
+}
+
+.restart {
+    color: white;
+    cursor: pointer;
+    font-size: calc(0.75rem * var(--font-size-multiplier));
+    font-family: "BPG Mrgvlovani";
+    line-height: 16px;
+}
+.fontButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.minus, .plus {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: calc(0.625rem * var(--font-size-multiplier));
+    font-family: "BPG Mrgvlovani";
+    justify-content: space-between;
+    width: 8em;
+}
+
+.minus > div, 
+.plus > div {
+    background: var(--button-hover);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+}

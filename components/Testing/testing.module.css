@@ -1,0 +1,19 @@
+.testing {
+    background: var(--button-hover);
+    color: white;
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    z-index: 20000;
+}
+
+@media screen and (max-width: 400px) {
+    .testing {
+        font-size: calc(0.75rem * var(--font-size-multiplier))
+    }
+}

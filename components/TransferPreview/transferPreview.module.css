@@ -1,0 +1,72 @@
+.transferContainer {
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 78px;
+}
+
+.transferContainer > p {
+    color: var(--text-color);
+    font: calc(1.875rem * var(--font-size-multiplier)) "Gilroy GEO";
+    line-height: 40px;
+    margin-bottom: 16px;
+}
+
+.transferContainer > a {
+    color: var(--text-color);
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 16px;
+    margin-bottom: 39px;
+}
+
+.transferContent {
+    background-image: url(../../img/transfer-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+    min-height: 323px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    max-width: 1090px;
+}
+
+.transferContent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.46);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.transferContent > * {
+    z-index: 2;
+}
+
+@media screen and (max-width: 1130px) {
+    .transferContainer {
+        padding: 0 20px 78px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .transferContent {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 161.5px);
+    }
+}
+
+@media screen and (max-width: 700px) {    
+    .transferContainer > p {
+        font-size: calc(1.1875rem * var(--font-size-multiplier));
+    }
+}

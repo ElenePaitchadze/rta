@@ -1,0 +1,108 @@
+.header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.scrolled, .header1 {
+    background: var(--primary-color);
+}
+
+.headerContainer {
+    background: rgba(10, 105, 102, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1090px;
+    height: 86px;
+}
+
+.langSearch {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 37px;
+    height: auto;
+}
+
+.logo span {
+    color: var(--text-color-1);
+    font: calc(1rem * var(--font-size-multiplier)) "FiraGo";
+    line-height: 19px;
+    max-width: 255px;
+}
+
+.logoEn span {
+    max-width: 200px;
+}
+
+.toggle {
+    display: none;
+}
+
+.linkMobile {
+    color: white;
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 16px;
+    text-decoration: none;
+}
+
+.activeMobile {
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1130px) {
+    .headerContainer {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .langSearch {
+        display: none;
+    }
+
+    .toggle {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        gap: 10px;
+    }
+    
+    .logo img {
+        width: 30px;
+        height: auto;
+    }
+
+    .logo span {
+        font-size: calc(0.8125rem * var(--font-size-multiplier));
+        max-width: 175px;
+    }
+    
+    .logoEn span {
+        font-size: calc(0.8125rem * var(--font-size-multiplier));
+        max-width: 150px;
+    }
+}

@@ -1,0 +1,136 @@
+.searchContainer {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px 100px;
+}
+
+.searchContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1090px;
+}
+
+.searchHeading {
+    color: var(--text-color);
+    font: calc(1.25rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 28px;
+    margin: 37px 0 41px;
+}
+
+.searchHeading span {
+    color: var(--secondary-color);
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-bottom: 40px;
+}
+
+.result {
+    display: flex;
+    gap: 20px;
+}
+
+.result > img {
+    border-radius: 10px;
+    width: 297px;
+    height: 168px;
+    object-fit: cover;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 446px;
+}
+
+.title {
+    color: var(--primary-color);
+    font: calc(1rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 22px;
+    margin-bottom: 14px;
+    height: 19px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.text {
+    color: var(--text-color);
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 16px;
+    height: 64px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.text a {
+    text-decoration: none;
+    border: none
+}
+
+.seeMore span {
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 19px;
+}
+
+.seeMore {
+    width: 105px;
+    cursor: pointer;
+    color: inherit;
+    position: relative; 
+    text-decoration: none; 
+}
+
+.seeMore::after {
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    width: 0; 
+    height: 2px; 
+    background: var(--primary-color); 
+    transition: width 0.3s ease; 
+}
+
+.seeMore:hover::after {
+    width: 100%; 
+}
+
+.seeMore > img {
+    transition: transform 0.3s ease;
+}
+  
+.seeMore:hover > img {
+    transform: translateX(5px);
+}
+
+.seeMore span {
+    color: var(--primary-color);
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .result {
+        flex-direction: column;
+    }
+
+    .details {
+        width: 297px;
+    }
+
+    .results {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .details, .result > img {
+        width: 280px;
+    }
+}

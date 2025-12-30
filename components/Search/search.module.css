@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    align-content: center;
+    gap: 10px
+}
+
+.input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;       
+    font-family: "BPG Mrgvlovani";
+    padding-left: 10px;
+    width: 206px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.form svg {
+    fill: white;
+}

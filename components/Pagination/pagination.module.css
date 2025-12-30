@@ -1,0 +1,31 @@
+.pagination {
+    color: var(--pagination-btn);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.paginationBtn {
+    background: transparent;
+    border-radius: 50%;
+    border: none;
+    color: var(--pagination-btn);
+    cursor: pointer;
+    font: calc(0.8125rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 18px;
+    width: 25px;
+    height: 25px;
+}
+
+.paginationBtn svg {
+    fill: var(--pagination-btn);
+    transition: all 0.5s ease;
+}
+
+.paginationBtn svg:hover {
+    fill: var(--button-hover);
+}
+
+.active {
+    color: var(--primary-color);
+}

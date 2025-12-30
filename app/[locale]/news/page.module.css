@@ -1,0 +1,54 @@
+.newsContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 57px;
+    width: 100%;
+    margin-bottom: 74px;
+}
+
+.newsHeading {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 38px;
+}
+
+.newsHeading > p:first-child {
+    color: var(--text-color);
+    font-size: calc(1.25rem * var(--font-size-multiplier));
+    font-family: "BPG Mrgvlovani Caps 2010";
+    line-height: 28px;
+}
+
+.newsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 31px;
+    row-gap: 41px;
+}
+
+.noNewsFound {
+    font-size: calc(1rem * var(--font-size-multiplier));
+    font-family: "BPG Mrgvlovani Caps 2010";
+    line-height: 20px;
+}
+
+@media screen and (max-width: 1122px) {
+    .newsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 757px) {
+    .newsGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .newsHeading {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

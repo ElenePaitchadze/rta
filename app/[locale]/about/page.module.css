@@ -1,0 +1,30 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.about img {
+    width: 763px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.about div {
+    font: 14px "BPG Mrgvlovani";
+    line-height: 19px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1130px) {
+    .about {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 803px) {
+    .about img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,97 @@
+.vacancy {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+}
+
+.vacancyTitle {
+    background: white;
+    border: 1px solid #DBDBDB;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 19px;
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.vacancyTitle > p {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.vacancyTitle1 {
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.vacancy svg {
+    cursor: pointer;
+    fill: #C8C8C8;
+    transition: all 0.5s ease;
+}
+
+.vacancy svg:hover {
+    fill: var(--primary-color)
+}
+
+.rotateIcon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease; 
+}
+
+.vacancyDescription {
+    border: 1px solid #DBDBDB;
+    border-radius: 10px;
+    color: var(--text-color);
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 16px;
+    width: 100%;
+    opacity: 0;
+    max-height: 0;
+    overflow-y: auto;
+    padding: 0 20px;
+    scroll-behavior: smooth;
+    transition: all 0.5s ease;
+    scrollbar-width: thin;
+    scrollbar-color: #D5D5D5 #F1F1F1;
+}
+
+.vacancyDescription::-webkit-scrollbar {
+    width: 7px;
+}
+  
+.vacancyDescription::-webkit-scrollbar-thumb {
+    background-color: #D5D5D5;
+    border-radius: 3px;
+}
+  
+.vacancyDescription::-webkit-scrollbar-track {
+    background: #F1F1F1;
+}
+  
+.vacancyDescription::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+  
+.visible {
+    max-height: 300px;
+    opacity: 1;
+    padding: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .vacancyTitle > p {
+        align-items: unset;
+        height: 50px;
+        font-size: calc(0.625rem * var(--font-size-multiplier));
+    }
+}

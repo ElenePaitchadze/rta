@@ -1,0 +1,339 @@
+.contactContainer {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 37px 0 61px;
+}
+
+.contactContent {
+    width: 100%;
+    max-width: 1090px;
+}
+
+.heading {
+    color: var(--text-color);
+    font: calc(1.25rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 28px;
+    margin-bottom: 54px;
+}
+
+.contact {
+    background-image: url(../../img/contact-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 179px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.contact > * {
+    z-index: 3;
+}
+
+.emails {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-right: 1px solid white;
+    padding-right: 4%;
+    height: 64px;
+    justify-content: center;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.email a,
+.phone a {
+    color: white;
+    text-decoration: none;
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 19px;
+    width: 140px;
+}
+
+.phone {
+    border-right: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    padding: 0 4%;
+}
+
+.mediaLinks {
+    display: flex;
+    gap: 10px;
+}
+
+.mediaLinks a {
+    background: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    transition: all 0.5s ease;
+}
+
+.mediaLinks a:hover {
+    background-color: var(--primary-color);
+}
+
+.mediaLinks a:hover svg {
+    fill: white;
+}
+
+.mediaLinks svg {
+    fill: var(--primary-color);
+}
+
+.socialMedia {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.socialMedia > p:first-child {
+    color: white;
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 19px;
+}
+
+.officersInfo {
+    margin-bottom: 100px;
+}
+
+.contactForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 930px;
+    margin: 0 auto 61px;
+}
+
+.contactForm > p:first-child {
+    color: var(--text-color);
+    font: calc(1rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 22px;
+    margin-bottom: 19px;
+}
+
+.contactForm form {
+    width: 100%;
+}
+
+.formGroup1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 17px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.formGroup label {
+    color: var(--text-color);
+    font: calc(0.875rem * var(--font-size-multiplier)) "Gilroy GEO";
+    line-height: 18px;
+    padding-left: 30px;
+}
+
+.formGroup input {
+    border: 1px solid #DBDBDB;
+    border-radius: 10px;
+    color: #8D8D8D;
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 16px;
+    padding: 0 10px 0 30px;
+    width: 294px;
+    height: 50px;
+}
+
+.formGroup input:focus,
+.contactForm form textarea:focus {
+    outline: none;
+}
+
+.contactForm form textarea {
+    border: 1px solid #DBDBDB;
+    border-radius: 10px;
+    color: #8D8D8D;
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 16px;
+    padding: 21px 10px 0 30px;
+    height: 102px;
+    width: 100%;
+    resize: none;
+    margin-bottom: 30px;
+}
+
+.submitForm {
+    background: var(--secondary-color);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 16px;
+    width: 192px;
+    height: 50px;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+
+.submitForm:hover {
+    background: #D4AF6C;
+}
+
+.addresses {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    border-right: 1px solid white;
+    padding: 0 4%;
+}
+
+.address svg {
+    fill: white;
+}
+
+.address > span:first-of-type {
+    color: white;
+    font: calc(0.875rem * var(--font-size-multiplier)) "Gilroy GEO";
+    line-height: 18px;
+}
+
+.address > span:last-child, .address > span:nth-of-type(2) {
+    color: white;
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 16px;
+}
+
+.map {
+    width: 100%;
+}
+
+.map iframe {
+    border: none;
+    border-radius: 10px;
+}
+
+.error, .status {
+    font: calc(1rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: rgb(219, 6, 6);
+}
+
+.status {
+    color: green;
+}
+
+@media screen and (max-width: 1130px) {
+    .contactContainer {
+        padding: 37px 20px 61px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .formGroup1 {
+        grid-template-columns: unset;
+    }
+
+    .formGroup input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .addresses > div:first-child {
+        /* padding-right: 16%; */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .emails, .phone {
+        /* padding-right: 40px; */
+        padding-right: 0;
+    }
+
+    .address {
+        padding-right: 4%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .addresses > div:first-child {
+        padding-right: unset;
+        border-right: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: calc(0.9375rem * var(--font-size-multiplier));
+        line-height: 20px;
+        margin-bottom: 30px;
+    }
+
+    .contact {
+        padding: 20px 0;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .emails, .phone, .address {
+        padding-right: unset;
+        border-bottom: 1px solid white;
+        padding-bottom: 20px;
+        width: 100%;
+        border-right: none;
+    }
+
+    .emails {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .addresses {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .addresses > div:first-child {
+        /* border-bottom: 1px solid white; */
+        padding-bottom: 20px;
+    }
+}

@@ -1,0 +1,14 @@
+.safetyContent {
+    width: 100%;
+}
+
+.safetyContent > div:first-child {
+    color: var(--text-color);
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 19px;
+    margin-bottom: 30px;
+}
+
+.safetyContent ul {
+    padding-left: 15px;
+}

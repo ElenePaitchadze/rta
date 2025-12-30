@@ -1,0 +1,16 @@
+export default async function mainNews() {
+  try {
+    const res = await fetch(`https://admin.rta.gov.ge/api/news.php`, { 
+      cache: 'no-cache' 
+    });
+
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching news:", error);
+    return null;
+  }
+}

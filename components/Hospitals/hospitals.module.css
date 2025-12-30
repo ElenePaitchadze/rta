@@ -1,0 +1,37 @@
+.hospitalList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.hospitalItem {
+  width: 100%;
+}
+
+.hospitalName {
+  background: var(--background-color);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 10px 20px;
+  font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+  line-height: 19px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.hospitalName.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var( --text-color-1);
+}
+
+.hospitalDetails {
+  color: var(--text-color);
+  font: calc(0.75rem * var(--font-size-multiplier)) 'BPG Mrgvlovani';
+  line-height: 16px;
+  padding-top: 15px;
+}

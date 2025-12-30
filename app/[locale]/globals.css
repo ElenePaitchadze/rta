@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #0A6966;
+    --secondary-color: #0EACA7;
+    --button-hover: #0F817D;
+    --side-nav: #F9F9F9;
+    --pagination-btn: #c8c8c8;
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --text-color-1: #ffffff;
+    --font-size-multiplier: 1;
+    font-size: calc(16px * var(--font-size-multiplier));
+}
+
+.nodataavalable {
+    color: var(--primary-color);
+    font: 16px 'BPG Mrgvlovani Caps 2010';
+    line-height: 20px;
+}
+
+.customNotFound {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    font: 14px "BPG Mrgvlovani Caps 2010";
+    line-height: 19px;
+    color: var(--primary-color);
+    min-height: 50vh;
+}
+
+/* Dropdown menu styles */
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    left: 1rem;
+    top: 100%;
+    max-height: 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: max-height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdownMenu.open {
+    max-height: 330px;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 900px) {
+    .dropdownMenu {
+        background: rgba(0, 105, 102, 0.83);
+        display: block;
+    }
+
+    .dropdownMenu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 8px;
+    }
+
+    .dropdownMenu ul a:first-child {
+        padding-top: 20px;
+    }
+
+    .dropdownMenu ul a:last-child {
+        padding-bottom: 20px;
+    }
+
+    .dropdownMenu form, 
+    .dropdownMenu div:last-child {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* Custom swiper pagination buttons */
+.bannerSwiper {
+    width: 100%;
+    /* height: 461px; */
+    margin-top: -166px;
+    height: 627px;
+}
+
+.bannerSwiper .swiper-pagination-bullet-active {
+    background: white !important;
+}
+
+.bannerSwiper img {
+    width: 100%;
+    /* height: 461px; */
+    height: 627px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .bannerSwiper, .bannerSwiper img {
+        /* height: 200px; */
+        height: 282px;
+    }
+}
+
+.mySwiper {
+    padding-bottom: 57px !important;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+    vertical-align: middle !important;
+    transition: width 0.3s ease !important;
+    width: 60px !important;
+    height: 10px !important;
+    border-radius: 6px !important; 
+    background-color: var(--primary-color) !important;
+}
+
+/* Shared inner pages' styles */
+.innerPageContainer {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 120px;
+}
+
+.innerPageContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1090px;
+    gap: 38px;
+}
+
+.innerPageContent > p:first-child {
+    color: var(--text-color);
+    font: calc(1.25rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 28px;
+    margin-top: 38px;
+}
+
+.innerPage {
+    display: grid;
+    grid-template-columns: 297px 1fr;
+    gap: 30px;
+    width: 100%;
+    align-items: start;
+}
+
+@media screen and (max-width: 1130px) {
+    .innerPageContainer {
+        padding: 0 20px 100px;
+    }
+
+    .innerPage {
+        grid-template-columns: unset;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .innerPageContent > p:first-child {
+        font-size: calc(0.9375rem * var(--font-size-multiplier));
+        line-height: 20px;
+    }
+}
+
+/* not found page styles */
+.newsNotFound {
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 19px;
+    padding-top: 50px;
+}
+
+/* about us text */
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.about img {
+    width: 763px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.about div {
+    color: var(--text-color);
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 19px;
+    width: 100%;
+}
+
+.about ul {
+    padding-left: 15px;
+}
+
+.structure img {
+    width: 763px !important;
+    height: auto;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1130px) {
+    .about {
+        align-items: center;
+    }
+
+    .structure img {
+        margin: 0 auto;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 803px) {
+    .about img {
+        width: 100% !important;
+    }
+}
+
+/* safety pages styles */
+.safetyContent {
+    width: 100%;
+}
+
+.safetyContent > div:first-child {
+    color: var(--text-color);
+    font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+    line-height: 19px;
+    margin-bottom: 30px;
+}
+
+.safetyContent ul {
+    padding-left: 15px;
+}
+
+/* fancyboxContainer styles */
+.fancyboxContainer > div:first-child {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.fancyboxContainer > div:first-child img {
+    width: 170px;
+    height: 111px;
+    border-radius: 10px;
+    margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 780px) {
+    .fancyboxContainer > div:first-child {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .fancyboxContainer > div:first-child a img {
+        width: 135px;
+    }
+}
+
+/* newsGallery swiper styles */
+.newsGallery img {
+    border-radius: 10px;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.newsGallery .swiper-pagination-bullet {
+    background: white;
+    opacity: 1 !important;
+}
+
+.newsGallery .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin-right: 13px !important;
+}
+
+.newsGallery .swiper-pagination-bullet-active {
+    background: var(--primary-color) !important;
+}
+
+.newsGallery .swiper-pagination-bullets {
+    bottom: 34px !important;
+}
+
+.examBannerCont {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.examBanner {
+    width: 100%;
+    max-width: 1090px;
+}
+
+.examBanner img {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .examBanner img {
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .newsGallery img {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .newsGallery img {
+        height: 250px;
+    }
+
+    .examBannerCont { margin-bottom: 40px; }
+    .examBanner img { height: 150px; }
+}

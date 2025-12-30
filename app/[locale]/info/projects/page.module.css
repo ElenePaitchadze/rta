@@ -1,0 +1,66 @@
+.projectPage {
+    width: 100%;
+}
+
+.filter {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.select {
+    position: relative;
+    width: 297px;
+}
+
+.select img {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.chooseProject {
+    appearance: none;
+    background: #F9F9F9;
+    border: none;
+    border-radius: 5px;
+    color: #848484;
+    cursor: pointer;
+    font: 12px "BPG Mrgvlovani";
+    line-height: 16px;
+    padding-left: 17px;
+    width: 100%;
+    height: 55px;
+}
+
+.text {
+    font: 14px "BPG Mrgvlovani";
+    line-height: 19px;
+    margin-bottom: 39px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-bottom: 52px;
+}
+
+.noprojects {
+    color: var(--text-color);
+    font: calc(1rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+}
+
+@media screen and (max-width: 700px) {
+    .filter {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .select {
+        width: 280px;
+    }
+}

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "GL Tatishvili";
+    src: url("../../fonts/gl-tatishvili-metal-bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+     font-family: "Noto Sans Georgian";
+     src: url("../../fonts/NotoSansGeorgian_ExtraCondensed-Regular.ttf");
+     font-weight: normal;
+     font-style: normal;
+     font-display: swap;
+ }
+
+@font-face {
+     font-family: "FiraGo";
+     src: url("../../fonts/FiraGO-Regular.otf");
+     font-weight: normal;
+     font-style: normal;
+     font-display: swap;
+}
+
+@font-face {
+     font-family: "Gilroy GEO";
+     src: url("../../fonts/GilroyGEO-Heavy.eot");
+     src: url("../../fonts/GilroyGEO-Heavy.eot?#iefix") format("embedded-opentype"),
+          url("../../fonts/GilroyGEO-Heavy.woff2") format("woff2"),
+          url("../../fonts/GilroyGEO-Heavy.woff") format("woff"),
+          url("../../fonts/GilroyGEO-Heavy.ttf") format("truetype"),
+          url("../../fonts/GilroyGEO-Heavy.svg#GilroyGEO") format("svg");
+     font-weight: normal;
+     font-style: normal;
+     font-display: swap;
+ }
+
+@font-face {
+    font-family: "BPG Mrgvlovani Caps 2010";
+    src: url("../../fonts/BPGMrgvlovaniCaps2010.eot");
+    src: url("../../fonts/BPGMrgvlovaniCaps2010.eot?#iefix") format("embedded-opentype"),
+         url("../../fonts/BPGMrgvlovaniCaps2010.woff2") format("woff2"),
+         url("../../fonts/BPGMrgvlovaniCaps2010.woff") format("woff"),
+         url("../../fonts/BPGMrgvlovaniCaps2010.ttf") format("truetype"),
+         url("../../fonts/BPGMrgvlovaniCaps2010.svg#BPGMrgvlovaniCaps2010") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+@font-face {
+    font-family: "BPG Mrgvlovani";
+    src: url("../../fonts/BPGMrgvlovani.eot");
+    src: url("../../fonts/BPGMrgvlovani.eot?#iefix") format("embedded-opentype"),
+         url("../../fonts/BPGMrgvlovani.woff2") format("woff2"),
+         url("../../fonts/BPGMrgvlovani.woff") format("woff"),
+         url("../../fonts/BPGMrgvlovani.ttf") format("truetype"),
+         url("../../fonts/BPGMrgvlovani.svg#BPGMrgvlovani") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

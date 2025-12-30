@@ -1,0 +1,72 @@
+.safetyContainer {
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 78px;
+}
+
+.safetyContainer > p {
+    color: var(--text-color);
+    font: calc(1.875rem * var(--font-size-multiplier)) "Gilroy GEO", "Noto Sans Georgian";
+    line-height: 40px;
+    margin-bottom: 16px;
+}
+
+.safetyContainer > a {
+    color: var(--text-color);
+    font: calc(0.75rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 16px;
+    margin-bottom: 39px;
+}
+
+.safetyContent {
+    background-image: url(../../img/safety-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+    min-height: 323px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    max-width: 1090px;
+}
+
+.safetyContent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.46);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.safetyContent > * {
+    z-index: 2;
+}
+
+@media screen and (max-width: 1130px) {
+    .safetyContainer {
+        padding: 0 20px 78px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .safetyContent {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 150px);
+    }
+}
+
+@media screen and (max-width: 700px) {    
+    .safetyContainer > p {
+        font-size: calc(1.1875rem * var(--font-size-multiplier));
+    }
+}

@@ -1,0 +1,16 @@
+.buttons {
+    display: flex;
+    gap: 13px;
+}
+
+.active, .button {
+    background: transparent;
+    border: none;
+    color: var(--text-color-1);
+    cursor: pointer;
+    font-family: "BPG Mrgvlovani Caps 2010";
+}
+
+.active {
+    opacity: 0.63;
+}

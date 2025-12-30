@@ -1,0 +1,47 @@
+'use client'
+import styles from './newpdf.module.css';
+import url from '@/app/api/url';
+import { useState } from 'react';
+import docs from '@/img/docs.png';
+import arrow from '@/img/pdfArrow.svg';
+import docswhite from '@/img/docswhite.png';
+import { useTranslation } from 'react-i18next';
+
+export default function NewPDFComponent({ title, href, text }: { title: string, href: string, text: string }) {
+  const { t } = useTranslation(); 
+  const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
+
+  const toggleDescriptionVisibility = () => {
+    setIsDescriptionVisible(!isDescriptionVisible);
+  };
+  return (
+    <div className={styles.faq_item}>
+      <div 
+        className={!isDescriptionVisible ? styles.question : `${styles.question} ${styles.active}`} 
+        onClick={toggleDescriptionVisibility} >
+        <div>
+          <img src={docs.src} alt="docs icon" />
+          <img src={docswhite.src} alt="docs icon" />
+          <p>{title}</p>
+        </div>
+        <img src={arrow.src} alt="pdf arrow" />
+      </div>
+      <div className={`${styles.answer} ${isDescriptionVisible ? styles.visible : ''}`}>
+        <div dangerouslySetInnerHTML={{ __html: text }} />
+        {href && (
+          <a href={`${url}${href}`}  target="_blank"  rel="noopener noreferrer" className={styles.pdfLink}>
+            <figure>
+              <span>{t('download')}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20.573" height="25.716" viewBox="0 0 20.573 25.716">
+                <g transform="translate(-32 -16)">
+                  <path d="M63.638,117.44a1.926,1.926,0,0,0-.478.046V119a1.751,1.751,0,0,0,.388.03c.616,0,1-.311,1-.837C64.544,117.723,64.217,117.44,63.638,117.44Zm4.484.015a2.372,2.372,0,0,0-.523.046v3.356a2.1,2.1,0,0,0,.4.023,1.589,1.589,0,0,0,1.735-1.795A1.472,1.472,0,0,0,68.122,117.455Z" transform="translate(-26.152 -85.136)"></path>
+                  <path d="M44.858,16H34.572A2.572,2.572,0,0,0,32,18.572V39.144a2.572,2.572,0,0,0,2.572,2.572H50a2.572,2.572,0,0,0,2.572-2.572V23.715ZM39.069,34.245a2.384,2.384,0,0,1-1.666.54,2.868,2.868,0,0,1-.4-.023V36.6h-1.15V31.535a9.718,9.718,0,0,1,1.567-.105,2.464,2.464,0,0,1,1.569.41,1.5,1.5,0,0,1,.548,1.187A1.648,1.648,0,0,1,39.069,34.245Zm4.9,1.742a3.681,3.681,0,0,1-2.366.662,9.907,9.907,0,0,1-1.317-.077V31.536a10.218,10.218,0,0,1,1.567-.107,3.3,3.3,0,0,1,2.1.548,2.268,2.268,0,0,1,.868,1.934A2.6,2.6,0,0,1,43.964,35.988Zm4.751-3.568h-1.97v1.171h1.841v.944H46.746V36.6H45.581V31.468h3.135ZM44.858,25H43.572V18.572L50,25Z"></path>
+                </g>
+              </svg>
+            </figure>
+          </a>
+        )}
+      </div>
+    </div>
+  )
+}

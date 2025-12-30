@@ -1,0 +1,56 @@
+.sideNav, .sideNav1 {
+    background: var(--side-nav);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 297px;
+    /* height: 127px; */
+    padding: 20px 10px 20px 30px;
+}
+
+/* .sideNav1 {
+    height: 259px;
+} */
+
+.sideNav a,
+.sideNav1 a {
+    color: black;
+    cursor: pointer;
+    font: calc(1rem * var(--font-size-multiplier)) "BPG Mrgvlovani Caps 2010";
+    line-height: 22px;
+    transition: padding-left 0.2s ease;
+    text-decoration: none;
+}
+
+.sideNav a:hover,
+.sideNav1 a:hover,
+.active {
+    padding-left: 10px;
+    border-left: 2px solid var(--primary-color);
+}
+
+.active1 {
+    padding-left: 10px;
+    border-left: 2px solid var(--secondary-color);
+}
+
+.subCategories {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 1130px) {
+    .sideNav, .sideNav1 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sideNav a, .sideNav1 a {
+        font-size: calc(0.75rem * var(--font-size-multiplier));
+    }
+}
