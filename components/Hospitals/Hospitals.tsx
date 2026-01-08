@@ -22,14 +22,14 @@ export default function HospitalAccordion({ hospitals }: { hospitals: any[] }) {
             </button>
             {isOpen && (
               <div className={styles.hospitalDetails}>
-                <p><strong>მისამართი:</strong> {hospital.address}</p>
-                <p><strong>კონტაქტი:</strong> {hospital.contact}</p>
+                <p><b>მისამართი:</b> {hospital.address}</p>
+                <p><b>კონტაქტი:</b> {hospital.contact_info}</p>
 
-                <p><strong>ექიმები:</strong></p>
+                <p><b>ექიმები:</b></p>
                 <ul>
                   {hospital.doctors.map((doc: any) => (
                     <li key={doc.doctor_id}>
-                      {doc.name} — {doc.phone}
+                      {doc.name} — <a href={`tel: 599000000`}>{doc.phone}</a>
                     </li>
                   ))}
                 </ul>

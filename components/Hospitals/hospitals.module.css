@@ -31,7 +31,22 @@
 
 .hospitalDetails {
   color: var(--text-color);
-  font: calc(0.75rem * var(--font-size-multiplier)) 'BPG Mrgvlovani';
-  line-height: 16px;
+  font: calc(0.875rem * var(--font-size-multiplier)) 'BPG Mrgvlovani';
+  line-height: 19px;
   padding-top: 15px;
 }
+
+.hospitalDetails p { margin-bottom: 5px; }
+.hospitalDetails ul { 
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 25px; 
+}
+
+.hospitalDetails ul a { 
+  color: var(--primary-color); 
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.hospitalDetails ul a:hover { color: var(--secondary-color); }
