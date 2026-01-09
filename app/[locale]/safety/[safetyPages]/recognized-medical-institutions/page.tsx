@@ -15,7 +15,7 @@ export default async function RecognizedMedicalInst({
   params: { locale: string, safetyPages: string; }
 }) {
 
-  const safetyPageChildren = 'recognized-medical-institution';
+  const safetyPageChildren = 'recognized-medical-institutions';
   const contentId = await getContentID('/Safety', `/${safetyPages}`, `/${safetyPageChildren}`);
   const safetyPageChildrenData = await getFilteredData(contentId, locale);
 
