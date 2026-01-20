@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 export default function PdfComponent({ title, href }: { title: string, href: string }) {
   const { t } = useTranslation(); 
   return (
-    <a href={`http://admin.rta.gov.ge/${href}`} target="_blank" className={styles.download}>
+    <a href={`http://rta.gov.ge/${href}`} target="_blank" className={styles.download}>
       <p>
         <span>
           { title }

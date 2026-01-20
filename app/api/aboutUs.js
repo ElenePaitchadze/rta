@@ -1,6 +1,6 @@
 export default async function aboutUs(contentId) {
   try {
-    const res = await fetch(`https://admin.rta.gov.ge/api/content.php?content_id=${contentId}`, { 
+    const res = await fetch(`https://rta.gov.ge/api/content.php?content_id=${contentId}`, { 
       cache: 'no-cache' 
     });
 

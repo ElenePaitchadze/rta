@@ -1,6 +1,6 @@
 export default async function transfer() {
   try {
-    const res = await fetch(`https://admin.rta.gov.ge/api/transfer.php`, {
+    const res = await fetch(`https://rta.gov.ge/api/transfer.php`, {
       cache: 'no-cache'
     });
 

@@ -32,7 +32,7 @@ export default function ProjectDetails({ rec_id, title, img, text, gallery, pdf,
     <div className={styles.projectPage}>
       <p className={styles.name}>{t('completedProjects')}</p>
       { showDefaultImage && <Image src={defaultImage} alt="default Image"/> }
-      { !showDefaultImage && <img src={`http://admin.rta.gov.ge/${img}`} alt={title} className={styles.mainImage} /> }
+      { !showDefaultImage && <img src={`http://rta.gov.ge/${img}`} alt={title} className={styles.mainImage} /> }
       <p className={styles.title}>{title}</p>
       <div
         className={styles.description}
@@ -55,10 +55,10 @@ export default function ProjectDetails({ rec_id, title, img, text, gallery, pdf,
                 key={index}
                 className="f-carousel__slide"
                 data-fancybox="gallery"
-                data-src={`http://admin.rta.gov.ge/${item.img}`}
-                data-thumb-src={`http://admin.rta.gov.ge/${item.img}`}
+                data-src={`http://rta.gov.ge/${item.img}`}
+                data-thumb-src={`http://rta.gov.ge/${item.img}`}
               >
-                <img src={`http://admin.rta.gov.ge/${item.img}`} alt="news images" className={styles.newsImage} />
+                <img src={`http://rta.gov.ge/${item.img}`} alt="news images" className={styles.newsImage} />
               </div>
             ))}
         </Fancybox>

@@ -18,7 +18,7 @@ export const metadata = {
   title: 'Rail Transport Agency of Georgia',
   description: 'Rail Transport Agency of Georgia',
   openGraph: {
-    images: 'https://admin.rta.gov.ge/uploads_script/news/2024/05/mxs9jn9qk4fip6j.png',
+    images: 'https://rta.gov.ge/uploads_script/news/2024/05/mxs9jn9qk4fip6j.png',
   },
 };
 

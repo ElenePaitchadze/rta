@@ -1,6 +1,6 @@
 export default async function publicInfo() {
   try {
-    const res = await fetch(`https://admin.rta.gov.ge/api/public_information.php`, {
+    const res = await fetch(`https://rta.gov.ge/api/public_information.php`, {
       cache: 'no-cache'
     });
 

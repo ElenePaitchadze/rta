@@ -35,7 +35,7 @@ export default async function Search(
             {filteredNewsItems.map(newsItem => (
               <div key={newsItem.rec_id} className={styles.result}>
                 <img  
-                  src={`http://admin.rta.gov.ge/${newsItem.img}`} 
+                  src={`http://rta.gov.ge/${newsItem.img}`} 
                   alt='news image' />
                 <div className={styles.details}>
                   <p className={styles.title}>{newsItem.title}</p>

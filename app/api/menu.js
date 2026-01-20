@@ -1,6 +1,6 @@
 async function getMenu() {
   try {
-    const res = await fetch('https://admin.rta.gov.ge/api/site_menu.php', {
+    const res = await fetch('https://rta.gov.ge/api/site_menu.php', {
       cache: 'no-cache',
     });
 

@@ -19,7 +19,7 @@ export default function ProjectCard({ rec_id, title, intro, img }: Partial<Proje
     <div className={styles.projectCard}>
       <Link className={styles.imageContainer} href={`/info/projects/${rec_id}`}>
         {isImageAvail && (
-          <img src={`http://admin.rta.gov.ge/${img}`} alt='project image' />
+          <img src={`http://rta.gov.ge/${img}`} alt='project image' />
         )}
         {!isImageAvail && (
           <Image src={defaultImage} alt="project image" priority={true}/>

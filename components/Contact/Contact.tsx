@@ -39,7 +39,7 @@ export default function Contact() {
     }
 
     try {
-      const response = await fetch('https://admin.rta.gov.ge/api/contact.php', {
+      const response = await fetch('https://rta.gov.ge/api/contact.php', {
         method: 'POST',
         headers: {
           "X-Requested-With": "XMLHttpRequest",

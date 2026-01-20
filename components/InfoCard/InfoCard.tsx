@@ -37,7 +37,7 @@ export default function InfoCard({ rec_id, img, date, title, intro }: Partial<Ne
     <div className={styles.infoPreview}>
       <Link className={styles.imageContainer} href={`/news/${rec_id}`}>
         {isImageAvail && (
-          <img src={`http://admin.rta.gov.ge/${img}`} alt='news image' />
+          <img src={`http://rta.gov.ge/${img}`} alt='news image' />
         )}
         {!isImageAvail && (
           <Image src={defaultImage} alt="news image" priority={true}/>

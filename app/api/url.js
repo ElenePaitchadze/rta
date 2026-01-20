@@ -1,2 +1,2 @@
-const url = "https://admin.rta.gov.ge/";
+const url = "https://rta.gov.ge/";
 export default url;

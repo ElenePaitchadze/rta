@@ -1,6 +1,6 @@
 export async function newSafety() {
   try {
-    const res = await fetch(`https://admin.rta.gov.ge/api/new_safety.php`, {
+    const res = await fetch(`https://rta.gov.ge/api/new_safety.php`, {
       cache: 'no-cache'
     });
 
@@ -17,7 +17,7 @@ export async function newSafety() {
 
 export async function newTransfer() {
   try {
-    const res = await fetch(`https://admin.rta.gov.ge/api/new_transfer.php`, {
+    const res = await fetch(`https://rta.gov.ge/api/new_transfer.php`, {
       cache: 'no-cache'
     });
 
@@ -34,7 +34,7 @@ export async function newTransfer() {
 
 export async function newInfo() {
   try {
-    const res = await fetch(`https://admin.rta.gov.ge/api/public_information.php`, {
+    const res = await fetch(`https://rta.gov.ge/api/public_information.php`, {
       cache: 'no-cache'
     });
 

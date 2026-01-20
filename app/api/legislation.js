@@ -1,6 +1,6 @@
 export default async function legislation() {
   try {
-    const res = await fetch('https://admin.rta.gov.ge/api/legislation.php', { cache: 'no-cache' });
+    const res = await fetch('https://rta.gov.ge/api/legislation.php', { cache: 'no-cache' });
 
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);

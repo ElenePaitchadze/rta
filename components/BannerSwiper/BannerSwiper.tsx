@@ -28,7 +28,7 @@ export default function BannerSwiper({ bannerData }: {bannerData: BannerProps[]}
         bannerData.map((banner, index) => (
           <SwiperSlide key={index}>
           {banner.img && banner.img !== 'uploads_script/banner/' && (
-            <img src={`http://admin.rta.gov.ge/${banner.img}`} alt="banner image" />
+            <img src={`http://rta.gov.ge/${banner.img}`} alt="banner image" />
           )}
           </SwiperSlide>
         ))
