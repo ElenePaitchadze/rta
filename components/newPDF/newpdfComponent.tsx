@@ -29,7 +29,7 @@ export default function NewPDFComponent({ title, href, text }: { title: string, 
       <div className={`${styles.answer} ${isDescriptionVisible ? styles.visible : ''}`}>
         <div dangerouslySetInnerHTML={{ __html: text }} />
         {href && (
-          <a href={`${url}${href}`}  target="_blank"  rel="noopener noreferrer" className={styles.pdfLink}>
+          <a href={`${url}admin/${href}`}  target="_blank"  rel="noopener noreferrer" className={styles.pdfLink}>
             <figure>
               <span>{t('download')}</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="20.573" height="25.716" viewBox="0 0 20.573 25.716">
