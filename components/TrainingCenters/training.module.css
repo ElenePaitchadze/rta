@@ -1,0 +1,52 @@
+.centerList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.centerItem {
+  width: 100%;
+}
+
+.centerName {
+  background: var(--background-color);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 10px 20px;
+  font: calc(0.875rem * var(--font-size-multiplier)) "BPG Mrgvlovani";
+  line-height: 19px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.centerName.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var( --text-color-1);
+}
+
+.centerDetails {
+  color: var(--text-color);
+  font: calc(0.875rem * var(--font-size-multiplier)) 'BPG Mrgvlovani';
+  line-height: 19px;
+  padding-top: 15px;
+}
+
+.centerDetails p { margin-bottom: 5px; }
+.centerDetails ul { 
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 25px; 
+}
+
+.centerDetails ul a { 
+  color: var(--primary-color); 
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.centerDetails ul a:hover { color: var(--secondary-color); }

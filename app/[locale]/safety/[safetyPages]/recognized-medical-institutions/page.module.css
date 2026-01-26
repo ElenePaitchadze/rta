@@ -9,6 +9,8 @@
     margin-bottom: 30px;
 }
 
+.safetyContent > div:first-child * { font-family: 'BPG Mrgvlovani' !important; }
+
 .safetyContent ul {
     padding-left: 15px;
 }

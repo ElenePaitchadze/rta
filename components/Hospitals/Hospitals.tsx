@@ -29,7 +29,7 @@ export default function HospitalAccordion({ hospitals }: { hospitals: any[] }) {
                 <ul>
                   {hospital.doctors.map((doc: any) => (
                     <li key={doc.doctor_id}>
-                      {doc.name} — <a href={`tel: 599000000`}>{doc.phone}</a>
+                      {doc.name} — <a href={`tel: ${doc.phone}`}>{doc.phone}</a>
                     </li>
                   ))}
                 </ul>

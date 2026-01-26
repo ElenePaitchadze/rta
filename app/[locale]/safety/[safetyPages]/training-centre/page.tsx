@@ -1,0 +1,51 @@
+import TranslationsProvider from '@/components/TranslationsProvider';
+import styles from './page.module.css';
+import initTranslations from '@/app/i18n';
+import { getContentID } from '@/HelperFunctions/getContentId';
+import { childPdfs } from '@/HelperFunctions/filterSafetyPDF';
+import { getFilteredData } from '@/HelperFunctions/filterAbouData';
+import NewPDFComponent from '@/components/newPDF/newpdfComponent';
+import TrainingCenters from '@/components/TrainingCenters/TrainingCenters';
+import getCenters from '@/HelperFunctions/getCenters';
+
+export default async function TrainingCenter({
+  searchParams, params: { locale, safetyPages }
+}: {
+  searchParams: { [key: string]: string | string[] | undefined },
+  params: { locale: string, safetyPages: string; }
+}) {
+
+  const safetyPageChildren = 'training-centre';
+  const contentId = await getContentID('/Safety', `/${safetyPages}`, `/${safetyPageChildren}`);
+  const safetyPageChildrenData = await getFilteredData(contentId, locale);
+
+  // get pdfs 
+  const pdfs = await childPdfs(safetyPages, safetyPageChildren, locale);
+
+  const centers = await getCenters();
+
+  // For Translation
+  const { t, resources } = await initTranslations(locale, ['dictionary']);
+  
+  return (
+    <TranslationsProvider resources={resources} locale={locale} namespaces={['dictionary']}>
+      <div className={styles.safetyContent}>
+        {safetyPageChildrenData.length > 0 && (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: safetyPageChildrenData[0].content
+            }}
+          />
+        )}
+        <TrainingCenters centers={centers} />
+        {pdfs.length > 0 && pdfs.map((pdf_item) => (
+          <NewPDFComponent 
+            key={pdf_item.rec_id} 
+            title={pdf_item.title} 
+            text={pdf_item.text}
+            href={pdf_item.pdf} />
+        ))}
+      </div>
+    </TranslationsProvider>
+  );
+}
