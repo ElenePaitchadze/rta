@@ -24,9 +24,9 @@ export default function TrainingCenters({ centers }: { centers: any[] }) {
               <div className={styles.centerDetails}>
                 <p><b>მისამართი:</b> {center.address}</p>
                 <p><b>საიდენტიფიკაციო კოდი:</b> {center.sid}</p>
-                <p><b>კურსი:</b> {center.course}</p>
+                <p><b>პროგრამის დასახელება:</b> {center.course}</p>
                 <p><b>ძალაშია:</b> {center.date_valid}</p>
-                <p><b>კონტაქტი:</b> {center.contact_info}</p>
+                <p><b>საკონტაქტო:</b> {center.contact_info}</p>
               </div>
             )}
           </div>

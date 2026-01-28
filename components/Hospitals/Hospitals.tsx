@@ -23,7 +23,7 @@ export default function HospitalAccordion({ hospitals }: { hospitals: any[] }) {
             {isOpen && (
               <div className={styles.hospitalDetails}>
                 <p><b>მისამართი:</b> {hospital.address}</p>
-                <p><b>კონტაქტი:</b> {hospital.contact_info}</p>
+                <p><b>საკონტაქტო:</b> {hospital.contact_info}</p>
 
                 <p><b>ექიმები:</b></p>
                 <ul>

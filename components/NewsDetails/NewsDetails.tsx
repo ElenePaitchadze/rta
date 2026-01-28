@@ -88,7 +88,7 @@ export default function NewsDetails(
                   extendedGallery!.map((image, index) => (
                     <SwiperSlide key={index}>
                       {image.img && image.img !== 'uploads_script/news/galleries/' && (
-                        <img src={`http://rta.gov.ge/${image.img}`} alt="banner image" />
+                        <img src={`http://rta.gov.ge/admin/${image.img}`} alt="banner image" />
                       )}
                     </SwiperSlide>
                   ))
@@ -112,7 +112,7 @@ export default function NewsDetails(
                         swiperRef.current?.slideTo(index); 
                         thumbnailSwiperRef.current?.slideTo(index); 
                       }} className={styles.thumbnailBtn}>
-                        <img src={`http://rta.gov.ge/${image.img}`} alt="gallery thumbnail" className={styles.thumbnail} />
+                        <img src={`http://rta.gov.ge/admin/${image.img}`} alt="gallery thumbnail" className={styles.thumbnail} />
                       </button>
                     </SwiperSlide>
                   ))
