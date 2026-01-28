@@ -23,7 +23,7 @@ export default function TrainingCenters({ centers }: { centers: any[] }) {
             {isOpen && (
               <div className={styles.centerDetails}>
                 <p><b>მისამართი:</b> {center.address}</p>
-                <p><b>sId:</b> {center.sid}</p>
+                <p><b>საიდენტიფიკაციო კოდი:</b> {center.sid}</p>
                 <p><b>კურსი:</b> {center.course}</p>
                 <p><b>ძალაშია:</b> {center.date_valid}</p>
                 <p><b>კონტაქტი:</b> {center.contact_info}</p>
