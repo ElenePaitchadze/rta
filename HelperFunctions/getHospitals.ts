@@ -18,3 +18,24 @@ export default async function getHospitals() {
     return [];
   }
 }
+
+export async function getEducation() {
+  try {
+    const res = await fetch(
+      'https://markeri.ge/dr/index.php?route=api/education',
+      { cache: 'no-store' }
+    );
+
+    if (!res.ok) {
+      console.error('Failed to fetch education:', res.status);
+      return [];
+    }
+
+    const data = await res.json();
+
+    return Array.isArray(data) ? data : [];
+  } catch (error) {
+    console.error('Hospital fetch error:', error);
+    return [];
+  }
+}
