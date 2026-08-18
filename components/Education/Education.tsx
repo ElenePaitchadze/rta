@@ -24,9 +24,9 @@ export default function EducationAccordeion({ education }: { education: any[] })
               <div className={styles.hospitalDetails}>
                 <p><b>მისამართი:</b> {edu.address}</p>
                 <p><b>საკონტაქტო:</b> {edu.contact_info}</p>
-                <p><b>SID:</b> {edu.sid}</p>
-                <p><b>კურსი:</b> {edu.course}</p>
-                <p><b>თარიღი:</b> {edu.date_valid}</p>
+                <p><b>საიდენთიფიკაციო ნომერი:</b> {edu.sid}</p>
+                <p><b>პროგრამის დასახელება:</b> {edu.course}</p>
+                <p><b>მოქმედების ვადა:</b> {edu.date_valid}</p>
               </div>
             )}
           </div>

@@ -14,3 +14,10 @@
 .safetyContent ul {
     padding-left: 15px;
 }
+
+.eduTitle {
+    color: black;
+    font: 16px 'BPG Mrgvlovani Caps 2010';
+    line-height: 24px;
+    margin-bottom: 15px;
+}

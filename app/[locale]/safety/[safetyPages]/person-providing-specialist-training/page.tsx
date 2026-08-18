@@ -37,6 +37,7 @@ export default async function RecognizedMedicalInst({
             }}
           />
         )}
+        <p className={styles.eduTitle}>{t("eduTitle")}</p>
         <EducationAccordeion education={education} />
         {pdfs.length > 0 && pdfs.map((pdf_item) => (
           <NewPDFComponent 
